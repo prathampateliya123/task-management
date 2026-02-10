@@ -1,0 +1,68 @@
+.submit-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.submit-container h2 {
+  margin-bottom: 20px;
+}
+
+.submit-form {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+textarea {
+  resize: none;
+  height: 110px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+button {
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background: #2563eb;
+  color: white;
+  font-weight: 500;
+}
+
+button.secondary {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+button:hover {
+  opacity: 0.9;
+}

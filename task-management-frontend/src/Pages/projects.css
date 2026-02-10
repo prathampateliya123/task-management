@@ -1,0 +1,109 @@
+.projects-container {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 24px;
+}
+
+/* LEFT */
+.projects-list h2 {
+  margin-bottom: 16px;
+}
+
+.project-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+}
+
+.project-card.active {
+  border: 2px solid #2563eb;
+}
+
+.project-card h3 {
+  margin-bottom: 6px;
+}
+
+.project-meta {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.status {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.status.InProgress {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status.NotStarted {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.progress-bar {
+  height: 6px;
+  background: #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 8px 0;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #2563eb;
+}
+
+/* RIGHT */
+.project-tasks {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.project-tasks table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+
+.project-tasks th,
+.project-tasks td {
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: center;
+}
+
+.task-status {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.task-status.Completed {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.task-status.InProgress {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.task-status.NotStarted {
+  background: #fee2e2;
+  color: #991b1b;
+}

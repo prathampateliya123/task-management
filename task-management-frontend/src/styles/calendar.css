@@ -1,0 +1,55 @@
+.calendar-page h2 {
+    margin-bottom: 20px;
+}
+
+.calendar-box {
+    background: white;
+    padding: 16px;
+    border-radius: 12px;
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.calendar-box input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 6px;
+}
+
+.calendar-tasks {
+    background: white;
+    padding: 20px;
+    border-radius: 14px;
+    margin-bottom: 30px;
+}
+
+.calendar-task-card {
+    background: #f8fafc;
+    display: flex;
+    gap: 150px;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.calendar-all {
+    background: white;
+    padding: 20px;
+    border-radius: 14px;
+}
+
+.calendar-all table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.calendar-all th,
+.calendar-all td {
+    padding: 10px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.no-task {
+    color: #6b7280;
+    margin-top: 10px;
+}
