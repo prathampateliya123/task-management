@@ -2,5 +2,6 @@
   "name": "Pratham",
   "role": "BCA Student",
   "skills": ["HTML", "CSS", "JavaScript", "Node.js"],
-  "active": true
+  "active": true,
+  "inactive": true
 }
