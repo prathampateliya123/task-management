@@ -27,6 +27,19 @@ const projectsData = [
       { id: 2, title: "Landing Page UI", status: "Not Started" },
     ],
   },
+  {
+    id: 3,
+    name: "Task Management System",
+    description: "Internal company task tracking system",
+    status: "In Progress",
+    progress: 65,
+    dueDate: "10 Sep 2024",
+    tasks: [
+      { id: 1, title: "Dashboard UI", status: "Completed" },
+      { id: 2, title: "API Integration", status: "In Progress" },
+      { id: 3, title: "Testing", status: "Not Started" },
+    ],
+  },
 ];
 
 export default function Projects() {
