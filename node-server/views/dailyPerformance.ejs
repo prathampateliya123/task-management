@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family:
+          "Inter Tight", "Inter", "Roboto", "Helvetica Neue", Helvetica, Arial,
+          sans-serif;
+        font-weight: 400;
+        padding: 0;
+        margin: 0;
+        background-color: #ffffff;
+      }
+
+      table {
+        mso-table-lspace: 0px;
+        mso-table-rspace: 0px;
+      }
+
+      #main-content {
+        width: 100%;
+        max-width: 640px;
+        padding: 0;
+        margin: 14px auto;
+      }
+
+      #main-body {
+        width: 100%;
+        border-top: 3px solid #d0ff71;
+        padding: 50px 48px;
+        background-color: #001412;
+      }
+
+      #logo img {
+        display: block;
+        max-width: 192px;
+      }
+
+      #title-text {
+        font-size: 24px;
+        color: #ffffff;
+        font-weight: 700;
+        line-height: 29px;
+        margin: 0;
+      }
+
+      #greeting-text,
+      #support-text,
+      #security-text {
+        color: #7e8a87;
+        font-size: 16px;
+        line-height: 150%;
+        margin: 0;
+      }
+
+      #active-text {
+        color: #ffffff;
+        font-size: 16px;
+        line-height: 150%;
+        margin: 0;
+      }
+
+      #account-details-box {
+        background-color: #001f1c;
+        padding: 12px 20px;
+        margin: 24px 0;
+      }
+
+      .account-detail-label {
+        color: #ebfff6;
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        opacity: 0.6;
+      }
+
+      .account-detail-value {
+        color: #d0ff71;
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      #dashboard-button-link {
+        display: inline-block;
+        padding: 14px 24px;
+        background-color: #d0ff71;
+        color: #193133;
+        text-decoration: none;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+
+  <body>
+    <table id="main-content" align="center">
+      <tr>
+        <td>
+          <table id="main-body">
+            <tr>
+              <td id="logo">
+                <img src="<%= logoUrl %>" alt="Bynix Logo" />
+              </td>
+            </tr>
+
+            <tr>
+              <td style="padding-top: 40px">
+                <h1 id="title-text">Daily Performance Update</h1>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="padding-top: 24px">
+                <p id="greeting-text">Hi <%= userName %>,</p>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="padding-top: 12px">
+                <p id="active-text">Great news!</p>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <p id="active-text">
+                  Your trading account generated a profit today.
+                </p>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <table id="account-details-box" width="100%">
+                  <tr>
+                    <td class="account-detail-label">Account ID</td>
+                    <td align="right" class="account-detail-value">
+                      #<%= accountId %>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="account-detail-label">Date</td>
+                    <td align="right" class="account-detail-value">
+                      <%= date %>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="account-detail-label">Net Profit</td>
+                    <td
+                      align="right"
+                      class="account-detail-value"
+                      style="color: #27eaa6"
+                    >
+                      +$<%= netProfit %>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="account-detail-label">Trades Executed</td>
+                    <td align="right" class="account-detail-value">
+                      <%= totalTrades %>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="account-detail-label">Winning Trades</td>
+                    <td align="right" class="account-detail-value">
+                      <%= winningTrades %>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <p id="active-text">
+                  You can review detailed performance in your dashboard.
+                </p>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="padding-top: 24px">
+                <a id="dashboard-button-link" href="<%= dashboardUrl %>">
+                  View Dashboard
+                </a>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="padding-top: 24px">
+                <p id="support-text">
+                  Thanks,<br />
+                  Bynix Team
+                </p>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="padding-top: 24px">
+                <p id="security-text">
+                  For support contact
+                  <a href="mailto:support@bynix.io" style="color: #d0ff71">
+                    support@bynix.io
+                  </a>
+                  <br /><br />
+                  Trading involves market risk.
+                  <br />© 2025 Bynix
+                </p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

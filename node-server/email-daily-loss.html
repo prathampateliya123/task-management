@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter Tight', 'Inter', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      padding: 0;
+      margin: 0;
+      background-color: #FFFFFF;
+    }
+
+    table {
+      mso-table-lspace: 0px;
+      mso-table-rspace: 0px;
+    }
+
+    #main-content {
+      width: 100%;
+      max-width: 640px;
+      padding: 0;
+      margin: 14px auto;
+    }
+
+    #main-body {
+      width: 100%;
+      border-top: 3px solid #E53935;
+      padding: 50px 48px;
+      background-color: #001412;
+    }
+
+    #logo img {
+      display: block;
+      max-width: 192px;
+    }
+
+    #title-text {
+      font-size: 24px;
+      font-family: 'Inter Tight', 'Inter', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      text-align: left;
+      color: #E53935;
+      font-weight: 700;
+      line-height: 29px;
+      font-style: normal;
+      margin: 0;
+    }
+
+    #greeting-text,
+    #info-text,
+    #support-text,
+    #security-text,
+    #address-text {
+      color: #7E8A87;
+      font-size: 16px;
+      font-style: normal;
+      font-family: 'Inter Tight', 'Inter', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      line-height: 150%;
+      margin: 0;
+    }
+
+    #account-details-box {
+      background-color: #001F1C;
+      border: none;
+      padding: 12px 20px;
+      margin: 24px 0;
+    }
+
+    #account-details-title {
+      color: #FFFFFF;
+      font-size: 16px;
+      font-family: 'Inter Tight', 'Inter', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-weight: 500;
+      line-height: 150%;
+      margin: 0 0 12px 0;
+    }
+
+    .account-detail-row {
+      padding: 4px 0;
+    }
+
+    .account-detail-label {
+      color: #EBFFF6;
+      font-size: 12px;
+      font-family: 'Inter Tight', 'Inter', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      opacity: 0.6;
+      margin: 0;
+    }
+
+    .account-detail-value {
+      color: #D0FF71;
+      font-size: 16px;
+      font-family: 'Inter Tight', 'Inter', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .account-detail-value-loss {
+      color: #E53935;
+      font-size: 16px;
+      font-family: 'Inter Tight', 'Inter', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .account-detail-value-neutral {
+      color: #FFFFFF;
+      font-size: 16px;
+      font-family: 'Inter Tight', 'Inter', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    #dashboard-button-link {
+      display: inline-block;
+      width: 192px;
+      height: 54px;
+      background-color: #D0FF71;
+      color: #193133;
+      text-align: center;
+      text-decoration: none;
+      font-family: 'Inter Tight', 'Inter', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 54px;
+      text-transform: uppercase;
+    }
+
+    
+    #great-news-text,
+    #active-text {
+      color: #FFFFFF;
+      font-size: 16px;
+      font-style: normal;
+      font-family: 'Inter Tight', 'Inter', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      line-height: 150%;
+      margin: 0;
+    }
+
+    a {
+      cursor: pointer;
+    }
+
+    @media screen and (max-width: 600px) {
+      body {
+        padding: 0 8px !important;
+      }
+
+      #main-body {
+        padding: 24px 20px !important;
+      }
+
+      #logo img {
+        width: 140px !important;
+        height: auto !important;
+      }
+
+      #title-text {
+        font-size: 19px !important;
+        line-height: 22px !important;
+      }
+
+      #greeting-text,
+      #info-text,
+      #support-text,
+      #security-text,
+      #address-text,
+      #great-news-text,
+      #active-text {
+        font-size: 14px !important;
+        line-height: 150% !important;
+      }
+
+      td[style*="padding-top: 48px"] {
+        padding-top: 26px !important;
+      }
+
+      td[style*="padding-top: 24px"] {
+        padding-top: 14px !important;
+      }
+
+      #dashboard-button-link {
+        width: fit-content !important;
+        height: 40px !important;
+        line-height: 40px !important;
+        font-size: 13px !important;
+        padding: 2px 20px !important;
+      }
+
+      #account-details-box {
+        padding: 8px 12px !important;
+      }
+
+      #account-details-title {
+        font-size: 14px !important;
+        margin-bottom: 8px !important;
+      }
+
+      .account-detail-label {
+        font-size: 10px !important;
+        letter-spacing: 1px !important;
+      }
+
+      .account-detail-value,
+      .account-detail-value-loss,
+      .account-detail-value-neutral {
+        font-size: 14px !important;
+      }
+
+      .account-detail-row {
+        padding: 6px 0 !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <table id="main-content" cellpadding="0" cellspacing="0" width="640" align="center">
+    <tbody>
+      <tr>
+        <td>
+          <table id="main-body" cellpadding="0" cellspacing="0">
+            <tbody>
+              <tr>
+                <td>
+                  <table style="width: 100%;" cellpadding="0" cellspacing="0">
+                    <tbody>
+                      <tr>
+                        <td id="logo" style="text-align: left;">
+                          <img src="images/logo.png" alt="Bynix Logo">
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="padding-top: 40px;">
+                          <h1 id="title-text">
+                            Trading Loss Update
+                          </h1>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+
+              <tr>
+                <td style="padding-top: 24px;">
+                  <p id="greeting-text">
+                    Hi Jack,
+                  </p>
+                </td>
+              </tr>
+
+              <tr>
+                <td style="padding-top: 18px;">
+                  <p id="active-text">
+                    Here's your trading performance summary for today.
+                  </p>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <table id="account-details-box" cellpadding="0" cellspacing="0" style="width: 100%;">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <p id="account-details-title">Account Details</p>
+                          <table cellpadding="0" cellspacing="0" style="width: 100%; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+                            <tbody>
+                              <tr>
+                                <td class="account-detail-row" style="padding: 4px 0;">
+                                  <table cellpadding="0" cellspacing="0" style="width: 100%;">
+                                    <tbody>
+                                      <tr>
+                                        <td style="width: 50%;">
+                                          <p class="account-detail-label">Account ID:</p>
+                                        </td>
+                                        <td style="text-align: right;">
+                                          <p class="account-detail-value">#251465</p>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="account-detail-row" style="padding: 4px 0;">
+                                  <table cellpadding="0" cellspacing="0" style="width: 100%;">
+                                    <tbody>
+                                      <tr>
+                                        <td style="width: 50%;">
+                                          <p class="account-detail-label">Date:</p>
+                                        </td>
+                                        <td style="text-align: right;">
+                                          <p class="account-detail-value">01-12-2025</p>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="account-detail-row" style="padding: 4px 0;">
+                                  <table cellpadding="0" cellspacing="0" style="width: 100%;">
+                                    <tbody>
+                                      <tr>
+                                        <td style="width: 50%;">
+                                          <p class="account-detail-label">Net Profit:</p>
+                                        </td>
+                                        <td style="text-align: right;">
+                                          <p class="account-detail-value-loss">-$185.40</p>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="account-detail-row" style="padding: 4px 0;">
+                                  <table cellpadding="0" cellspacing="0" style="width: 100%;">
+                                    <tbody>
+                                      <tr>
+                                        <td style="width: 50%;">
+                                          <p class="account-detail-label">Trades Executed:</p>
+                                        </td>
+                                        <td style="text-align: right;">
+                                          <p class="account-detail-value-neutral">12</p>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="account-detail-row" style="padding: 4px 0;">
+                                  <table cellpadding="0" cellspacing="0" style="width: 100%;">
+                                    <tbody>
+                                      <tr>
+                                        <td style="width: 50%;">
+                                          <p class="account-detail-label">Winning Trades:</p>
+                                        </td>
+                                        <td style="text-align: right;">
+                                          <p class="account-detail-value">04</p>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="account-detail-row" style="padding: 4px 0;">
+                                  <table cellpadding="0" cellspacing="0" style="width: 100%;">
+                                    <tbody>
+                                      <tr>
+                                        <td style="width: 50%;">
+                                          <p class="account-detail-label">Losing Trades:</p>
+                                        </td>
+                                        <td style="text-align: right;">
+                                          <p class="account-detail-value-loss">08</p>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <p id="active-text">
+                    While today resulted in a loss, remember that market performance can fluctuate. Your trading algorithm continues to operate based on its strategy and risk parameters.
+                  </p>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <table style="width: 100%; margin-top: 24px; margin-bottom: 24px;" cellpadding="0" cellspacing="0">
+                    <tbody>
+                      <tr>
+                        <td style="height: 1px; background-color: #FFFFFF; opacity: 0.1; width: 100%;"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <p id="active-text">
+                    You can review detailed trade history and performance insights anytime from your dashboard.
+                  </p>
+                </td>
+              </tr>
+
+              <tr>
+                <td style="padding-top: 24px;">
+                  <table cellpadding="0" cellspacing="0" border="0">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <a id="dashboard-button-link" href="#">
+                            GO TO DASHBOARD
+                          </a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+
+              <tr>
+                <td style="padding-top: 24px;">
+                  <p id="support-text">
+                    Thanks,
+                    <br>Bynix Team
+                  </p>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <table id="border-space" style="width: 100%; margin-top: 36px; margin-bottom: 36px;" cellpadding="0"
+                    cellspacing="0">
+                    <tbody>
+                      <tr>
+                        <td style="height: 1px; background-color: #FFFFFF; opacity: 0.1; width: 100%;"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <p id="security-text">
+                    For assistance, contact us at
+                    <a href="mailto:support@bynix.io" target="_blank"
+                      style="color: #D0FF71; font-size: 15px; font-family: 'Inter Tight', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal; font-weight: 500; line-height: 150%; white-space: nowrap; text-decoration: underline;">support@bynix.io</a>.
+                    <br>Download our trading app for a seamless experience:
+                  </p>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <p id="security-text" style="padding-top: 24px;">
+                    Trading involves risk. Past performance does not guarantee future results. Always trade responsibly.
+                    <br>&nbsp;
+                    <br>100 Smith Street, Melbourne VIC 3000
+                    <br>© 2025 Bynix
+                  </p>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
